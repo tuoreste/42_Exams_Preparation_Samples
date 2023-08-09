@@ -4,6 +4,7 @@
 	Allowed functions: write
 	--------------------------------------------------------------------------------
 <code>
+	<br>
 	Write a program that takes a string and displays its first word, followed by a
 	newline.
 
