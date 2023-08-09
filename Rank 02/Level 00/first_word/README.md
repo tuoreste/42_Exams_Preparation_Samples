@@ -1,10 +1,10 @@
 #Subject
 
-<code>
 	Assignment name  : first_word
 	Expected files   : first_word.c
 	Allowed functions: write
 	--------------------------------------------------------------------------------
+<code>
 
 	Write a program that takes a string and displays its first word, followed by a
 	newline.
