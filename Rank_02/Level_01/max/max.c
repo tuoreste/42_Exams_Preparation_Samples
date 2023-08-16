@@ -1,4 +1,4 @@
-int		max(int* tab, unsigned int len)
+int		max(int *tab, unsigned int len)
 {
 	unsigned int	res;
 	unsigned int	i;
@@ -13,5 +13,5 @@ int		max(int* tab, unsigned int len)
 			res = tab[i];
 		i++;
 	}
-	return (0);
+	return (res);
 }

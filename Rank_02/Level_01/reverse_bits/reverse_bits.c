@@ -7,7 +7,6 @@ unsigned char	reverse_bits(unsigned char octet)
 
 	i = 8;
 	res = 0;
-
 	while (i > 0)
 	{
 		res = res * 2 + (octet % 2);
