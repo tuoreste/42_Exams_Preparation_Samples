@@ -22,9 +22,9 @@ int	main(int argc, char **argv)
 		{
 			t = argv[1][i];
 			if (t >= 97 && t <= 122)
-				ft_putchar_n(t, t - 97);
+				ft_putchar_n(t, t - 96);
 			else if (t >= 65 && t <= 90)
-				ft_putchar_n(t, t - 122);
+				ft_putchar_n(t, t - 64);
 			else
 				write(1, &t, 1);
 			i++;

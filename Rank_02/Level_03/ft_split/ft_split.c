@@ -1,10 +1,11 @@
 #include <unistd.h>
-char    **ft_split(char *str)
+
+char	**ft_split(char *str)
 {
-	int     i;
-	int     j;
-	int     k;
-	char    **split;
+	int		i;
+	int		j;
+	int		k;
+	char	**split;
 
 	i = 0;
 	k = 0;

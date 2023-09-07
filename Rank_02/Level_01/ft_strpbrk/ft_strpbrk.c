@@ -1,10 +1,10 @@
 #include <stdio.h>
+
 char	*ft_strpbrk(const char *s1, const char *s2)
 {
 	int		i;
 	char	*cast1;
 	char	*cast2;
-
 
 	i = 0;
 	cast1 = (char *)s1;
@@ -24,7 +24,7 @@ char	*ft_strpbrk(const char *s1, const char *s2)
 }
 
 // //Commented for testing purporses---------
-// int	main()
+// int	main(void)
 // {
 // 	char *s1 = "Hello1Hey";
 // 	char *s2 = "work1Hey";

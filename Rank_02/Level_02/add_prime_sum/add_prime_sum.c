@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+
 int	atoi(char *str)
 {
 	int	i;
@@ -11,13 +12,17 @@ int	atoi(char *str)
 	nbr = 0;
 	if (!str[i])
 		return (0);
-	while (str[i] == '\n' || str[i] == '\t' || str[i] == '\v' || str[i] == '\f' || str[i] == ' ' || str[i] == '\r')
+	while (str[i] == '\n' || str[i] == '\t' || str[i] == '\v' || str[i] == '\f'
+		|| str[i] == ' ' || str[i] == '\r')
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 		if (str[i] == '-')
 			sign = -1;
 	while (str[i])
-		nbr = (nbr * 10) + (str[i++] - '0');
+	{
+		nbr = (nbr * 10) + (str[i] - '0');
+		i++;
+	}
 	return (nbr * sign);
 }
 
@@ -68,11 +73,11 @@ int	main(int argc, char **argv)
 	{
 		nb = atoi(argv[1]);
 		sum = 0;
-		while (nb > 0)
+		while (nb > 1)
 			if (is_prime(nb--))
 				sum += (nb + 1);
 		put_nbr(sum);
 	}
 	write(1, "\n", 1);
 	return (0);
-} 
+}

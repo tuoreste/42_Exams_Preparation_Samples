@@ -1,41 +1,47 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 
-void	union_funct(char *str1, char *str2)
+int	checker(int c, char *str, int index)
 {
-	int		i;
-	int		j;
+	int	i;
 
 	i = 0;
-	j = 0;
-	while (str1[i] != '\0')
-		i++;
-	while (str2[j] != '\0')
+	while (i < index)
 	{
-		str1[i] = str2[j];
-		i++;
-		j++;
-	}
-	str1[i] = '\0';
-	i = 0;
-	j = 0;
-	while (str1[i] != '\0')
-	{
-		while (str1[j] != '\0')
-		{
-			if (str1[i] == str1[j])
-				i++;
-			j++;
-		}
-		write(1, &str1[i], 1);
+		if (str[i] == c)
+			return (0);
 		i++;
 	}
+	return (1);
 }
 
 int	main(int argc, char **argv)
 {
+	int	i;
+	int	j;
+	int	k;
+
+	i = 0;
+	j = 0;
+	k = 0;
 	if (argc == 3)
-		union_funct(argv[1], argv[2]);
-	write(1, "\n", 1);
+	{
+		while (argv[1][i] != '\0')
+			i++;
+		while (argv[2][j] != '\0')
+		{
+			argv[1][i] = argv[2][j];
+			i++;
+			j++;
+		}
+		i--;
+		while (k <= i)
+		{
+			if (checker(argv[1][k] ,argv[1], k) == 1)
+				write(1, &argv[1][k], 1);
+			k++;
+		}
+	}
+	write (1, "\n", 1);
 }

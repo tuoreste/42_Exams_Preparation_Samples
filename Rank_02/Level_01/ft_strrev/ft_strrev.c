@@ -1,32 +1,32 @@
 #include <stdio.h>
-char    *ft_strrev_recursive(char *str, int start, int end)
+
+#include <stdio.h>
+
+char	*ft_strrev(char *str)
 {
-	if (start >= end)
+	int		l;
+	int		i;
+	char	temp;
+
+	l = 0;
+	i = 0;
+	while (str[l] != '\0')
+		l++;
+	while (i < l / 2)
 	{
-		return str;
+		temp = str[i];
+		str[i] = str[l - 1 - i];
+		str[l - 1 - i] = temp;
+		i++;
 	}
-	else
-	{
-		char temp = str[start];
-		str[start] = str[end];
-		str[end] = temp;
-		return ft_strrev_recursive(str, start + 1, end - 1);
-	}
+	return (str);
 }
 
-char    *ft_strrev(char *str)
-{
-	int length = 0;
-	while (str[length] != '\0')
-	{
-		length++;
-	}
-	return ft_strrev_recursive(str, 0, length - 1);
-}
+// //Testing purposes
+// int	main(void)
+// {
+// 	char *str = "reverse"; // Use a character array, not a string literal
+// 	printf("%s\n", ft_strrev(str));
+// 	return (0);
+// }
 
-
-int main()
-{
-	char	*str = "reverse";
-	printf("%s\n", ft_strrev(str));
-}

@@ -10,14 +10,14 @@ void	print_bits(unsigned char octet)
 	i = 8;
 	while (i--)
 	{
-		bit =  ((octet >> i) & 1) + '0' ;
 		write(1, &bit, 1);
+		bit = ((octet >> i) & 1) + '0';
 	}
 }
 
 // // Testing purposes
 // int	main()
 // {
-// 	char c = 2;
+// 	char c = 8;
 // 	print_bits(c);
 // }

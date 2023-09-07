@@ -15,3 +15,17 @@ unsigned char	reverse_bits(unsigned char octet)
 	}
 	return (res);
 }
+
+// //Testing purpose
+// int	main(void)
+// {
+// 	unsigned char c;
+
+// 	c = '&';
+// 	write(1, &c, 1);
+// 	write(1, "\n", 1);
+// 	c = reverse_bits(c);
+// 	write(1, &c, 1);
+// 	write(1, "\n", 1);
+// 	return (0);
+// }

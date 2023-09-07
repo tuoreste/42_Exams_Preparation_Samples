@@ -19,12 +19,12 @@ char    *ft_strcpy(char *s1, char *s2)
 // int	str_len(char *str)
 // {
 // 	int i = 0;
-
+//
 // 	while (str[i] != '\0')
 // 		i++;
 // 	return(i);
 // }
-
+//
 // int	main()
 // {
 // 	char	*str = "Return a copy of me";

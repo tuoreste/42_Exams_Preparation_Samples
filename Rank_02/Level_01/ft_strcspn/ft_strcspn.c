@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 size_t	ft_strcspn(const char *s, const char *reject)
 {
 	int	i;
@@ -18,8 +19,9 @@ size_t	ft_strcspn(const char *s, const char *reject)
 	}
 	return (i);
 }
+
 // //Commented for testing purposes----------------
-// int	main()
+// int	main(void)
 // {
 // 	char	*str1 = "12345";
 // 	char	*str2 = "67895";

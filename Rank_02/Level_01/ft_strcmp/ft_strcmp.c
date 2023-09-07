@@ -10,10 +10,10 @@ int	ft_strcmp(char *s1, char *s2)
 		i++;
 	return (s1[i] - s2[i]);
 }
-
-int	main()
-{
-	char *s1 = "Hi";
-	char *s2 = "Hey";
-	printf("%d\n", ft_strcmp(s1, s2));
-}
+// // Testing
+// int	main()
+// {
+// 	char *s1 = "Hi";
+// 	char *s2 = "Hey";
+// 	printf("%d\n", ft_strcmp(s1, s2));
+// }
